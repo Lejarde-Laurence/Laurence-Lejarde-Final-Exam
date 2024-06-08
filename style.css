@@ -1,0 +1,159 @@
+:root{
+    --main-color:#000;
+    --sub-colord:#afacac;
+    --accent-color:#000000;
+    --text-color:#ffff;
+    --buttons:#cdcdcd;
+    --main-font:Arial, Helvetica, sans-serif;
+    --hover-color:#ffa200;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background: linear-gradient(135deg, #5b86e5, #36d1dc);
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(247, 244, 244, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a8aaff;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a8aaff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+#hero {
+    background: url('src/img/lubao.webp') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .container {
+
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+#hero img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+#hero img:hover {
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #fff3f3;
+}
